@@ -17,6 +17,8 @@ resource "google_container_cluster" "this" {
   initial_node_count       = 1
   # Remove default node pool to use custom node pools instead
   remove_default_node_pool = true
+  # Set deletion_protection behaviour
+  deletion_protection      = var.DELETION_PROTECTION
 
   # Workload Identity configuration for GKE
   workload_identity_config {
