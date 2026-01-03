@@ -32,3 +32,9 @@ variable "GKE_POOL_NAME" {
   default     = "main"
   description = "GKE pool name"
 }
+
+variable "DELETION_PROTECTION" {
+  type        = bool
+  default     = false
+  description = "Enable deletion protection for the cluster"
+}
